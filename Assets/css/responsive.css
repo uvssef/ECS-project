@@ -849,10 +849,77 @@
   }
 }
 
+/* ── Page hero banner — unified inner pages ── */
+@media (max-width: 1024px) {
+  .page-banner {
+    height: 380px;
+  }
+
+  .page-banner-content {
+    margin-top: 68px;
+    max-width: 720px;
+  }
+
+  .page-banner-content h1 {
+    font-size: 44px;
+  }
+
+  .page-banner-content p {
+    font-size: 15px;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    height: 340px;
+  }
+
+  .page-banner-content {
+    margin-top: 64px;
+    padding: 0 20px;
+  }
+
+  .page-banner-content .section-label.light {
+    font-size: 10px;
+    letter-spacing: .16em;
+  }
+
+  .page-banner-content h1 {
+    font-size: 34px;
+    margin: 12px 0 14px;
+  }
+
+  .page-banner-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 12px;
+    max-width: 100%;
+  }
+
+  .page-banner-content .orange-rule {
+    width: 40px;
+    height: 3px;
+  }
+}
+
 /* ── Small Mobile Phones (640px) ── */
 @media (max-width: 640px) {
   .page-banner {
     height: 300px;
+  }
+
+  .page-banner-content {
+    margin-top: 60px;
+  }
+
+  .page-banner-content h1 {
+    font-size: 28px;
+    letter-spacing: .03em;
+  }
+
+  .page-banner-content p {
+    font-size: 13px;
   }
   
   .cta-band-inner {
@@ -2193,6 +2260,168 @@
   }
 
   #capacites .approche-card-desc {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOMEPAGE PROCESS — 5-col desktop, sticky stack on mobile
+   ═══════════════════════════════════════════════════════════════ */
+@media (min-width: 901px) {
+  #process .home-process-steps {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    flex-direction: unset !important;
+  }
+
+  #process .home-process-steps .approche-card {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  #process .home-process-steps {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    flex-direction: unset !important;
+  }
+
+  #process .home-process-steps .approche-card {
+    position: relative !important;
+    top: auto !important;
+    padding: 22px 14px 20px !important;
+    min-height: 0;
+  }
+
+  #process .home-process-steps .approche-card-title {
+    font-size: 15px;
+  }
+
+  #process .home-process-steps .approche-card-desc {
+    font-size: 12px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #process.home-process-section {
+    padding: 60px 0;
+  }
+
+  #process .home-process-steps {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    grid-template-columns: none !important;
+    padding-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  #process .home-process-steps::before {
+    display: none;
+  }
+
+  #process .home-process-steps .approche-card {
+    position: sticky !important;
+    width: 100%;
+    min-height: 0;
+    padding: 28px 22px 32px !important;
+    border: none !important;
+    border-radius: 14px !important;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16) !important;
+    margin-bottom: 0;
+    background: #fff !important;
+  }
+
+  #process .home-process-steps .approche-card:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16) !important;
+  }
+
+  #process .home-process-steps .approche-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--orange);
+  }
+
+  #process .home-process-steps .approche-card:nth-child(1) {
+    top: calc(var(--nav-h, 68px) + 0px);
+    z-index: 1;
+  }
+
+  #process .home-process-steps .approche-card:nth-child(2) {
+    top: calc(var(--nav-h, 68px) + 18px);
+    z-index: 2;
+  }
+
+  #process .home-process-steps .approche-card:nth-child(3) {
+    top: calc(var(--nav-h, 68px) + 36px);
+    z-index: 3;
+  }
+
+  #process .home-process-steps .approche-card:nth-child(4) {
+    top: calc(var(--nav-h, 68px) + 54px);
+    z-index: 4;
+  }
+
+  #process .home-process-steps .approche-card:nth-child(5) {
+    top: calc(var(--nav-h, 68px) + 72px);
+    z-index: 5;
+  }
+
+  #process .home-process-steps .approche-card-title {
+    font-size: 15px;
+  }
+
+  #process .home-process-steps .approche-card-desc {
+    font-size: 13px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #process .home-process-steps .approche-card {
+    padding: 24px 18px 30px !important;
+  }
+
+  #process .home-process-steps .approche-step {
+    font-size: 14px;
+  }
+
+  #process .home-process-steps .approche-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  #process .home-process-steps .approche-card-title {
+    font-size: 14px;
+  }
+
+  #process .home-process-steps .approche-card-desc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  #process .home-process-steps .approche-card {
+    padding: 22px 16px 28px !important;
+  }
+
+  #process .home-process-steps .approche-card-title {
+    font-size: 13px;
+  }
+
+  #process .home-process-steps .approche-card-desc {
     font-size: 11px;
     line-height: 1.5;
   }
