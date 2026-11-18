@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   ECS – ELECTRICAL CONSTRUCTION SERVICES  |  script.js v3
+   ENERZECH  |  script.js v3
    ═══════════════════════════════════════════════════════════════ */
 
 // EmailJS init — runs once, safe to call even on pages without a form
@@ -223,7 +223,7 @@ if (typeof emailjs !== 'undefined') {
 
   if (window.matchMedia('(min-width: 901px)').matches) {
     const bar = document.createElement('div');
-    bar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:#E8761A;z-index:9999;width:0%;transition:width .1s linear;pointer-events:none;';
+    bar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:#e2231a;z-index:9999;width:0%;transition:width .1s linear;pointer-events:none;';
     document.body.appendChild(bar);
     window.addEventListener('scroll', () => {
       const h = document.documentElement.scrollHeight - innerHeight;
@@ -247,20 +247,20 @@ if (typeof emailjs !== 'undefined') {
   window.addEventListener('resize', highlightNav);
 
   /* ─────────────────────────────────────────
-     ECS CONTACT PAGE FORM (EmailJS)
+     ENERZECH CONTACT PAGE FORM (EmailJS)
   ───────────────────────────────────────── */
-  const ecsForm = document.getElementById('contactForm');
+  const ENERZECHForm = document.getElementById('contactForm');
 
-  if (ecsForm) {
-    const ecsSubmitBtn = document.getElementById('submitBtn');
-    const ecsSubmitText = ecsForm.querySelector('.form-submit-text');
-    const ecsMessageBox = document.getElementById('formMessage');
+  if (ENERZECHForm) {
+    const ENERZECHSubmitBtn = document.getElementById('submitBtn');
+    const ENERZECHSubmitText = ENERZECHForm.querySelector('.form-submit-text');
+    const ENERZECHMessageBox = document.getElementById('formMessage');
 
-    ecsForm.addEventListener('submit', function (e) {
+    ENERZECHForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      ecsSubmitBtn.disabled = true;
-      ecsSubmitText.textContent = 'Envoi en cours...';
+      ENERZECHSubmitBtn.disabled = true;
+      ENERZECHSubmitText.textContent = 'Envoi en cours...';
 
       const templateParams = {
         to_email: 'visca655@gmail.com',
@@ -273,20 +273,20 @@ if (typeof emailjs !== 'undefined') {
 
       emailjs.send('service_tyu9ntl', 'template_s77gb3q', templateParams)
         .then(() => {
-          ecsMessageBox.style.display = 'block';
-          ecsMessageBox.style.color = '#28a745';
-          ecsMessageBox.innerHTML = '✅ Votre message a été envoyé avec succès.';
-          ecsForm.reset();
+          ENERZECHMessageBox.style.display = 'block';
+          ENERZECHMessageBox.style.color = '#28a745';
+          ENERZECHMessageBox.innerHTML = '✅ Votre message a été envoyé avec succès.';
+          ENERZECHForm.reset();
         })
         .catch((error) => {
           console.error(error);
-          ecsMessageBox.style.display = 'block';
-          ecsMessageBox.style.color = '#dc3545';
-          ecsMessageBox.innerHTML = '❌ Une erreur est survenue lors de l\'envoi.';
+          ENERZECHMessageBox.style.display = 'block';
+          ENERZECHMessageBox.style.color = '#dc3545';
+          ENERZECHMessageBox.innerHTML = '❌ Une erreur est survenue lors de l\'envoi.';
         })
         .finally(() => {
-          ecsSubmitBtn.disabled = false;
-          ecsSubmitText.textContent = 'Envoyer le message';
+          ENERZECHSubmitBtn.disabled = false;
+          ENERZECHSubmitText.textContent = 'Envoyer le message';
         });
     });
   }

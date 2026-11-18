@@ -368,7 +368,7 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    border-bottom: 3px solid #e85d04;
+    border-bottom: 3px solid var(--rouge, #e2231a);
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -384,7 +384,7 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    background: #e85d04;
+    background: var(--rouge, #e2231a);
     border-radius: 50%;
     animation: pulse-dot 2s ease-in-out infinite;
   }
@@ -476,7 +476,7 @@
   .sector-image .image-overlay .sector-tag {
     font-size: 13px;
     font-weight: 600;
-    background: rgba(232, 93, 4, 0.9);
+    background: rgba(226, 35, 26, 0.9);
     padding: 4px 14px;
     border-radius: 20px;
     display: inline-block;
@@ -499,7 +499,7 @@
     left: 0;
     width: 40px;
     height: 3px;
-    background: linear-gradient(90deg, #e85d04, #f48c06);
+    background: linear-gradient(90deg, #e2231a, #F45B54);
     border-radius: 2px;
   }
   
@@ -533,7 +533,7 @@
     position: relative;
     background: #f8f8f8;
     border-radius: 8px;
-    border-left: 3px solid #e85d04;
+    border-left: 3px solid var(--rouge, #e2231a);
     transition: all 0.3s ease;
   }
   
@@ -548,7 +548,7 @@
     left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: #e85d04;
+    color: var(--rouge, #e2231a);
     font-weight: 700;
     font-size: 16px;
   }
@@ -564,20 +564,20 @@
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #e85d04, #f48c06);
+    background: linear-gradient(135deg, #e2231a, #F45B54);
     color: #fff;
     font-weight: 600;
     font-size: 14px;
     border-radius: 30px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 16px rgba(232, 93, 4, 0.3);
+    box-shadow: 0 4px 16px rgba(226, 35, 26, 0.3);
     margin-top: 4px;
   }
   
   .sector-cta:active {
     transform: scale(0.96);
-    box-shadow: 0 2px 8px rgba(232, 93, 4, 0.2);
+    box-shadow: 0 2px 8px rgba(226, 35, 26, 0.2);
   }
   
   .sector-cta .arrow {
@@ -622,7 +622,7 @@
     gap: 8px;
     background: transparent;
     border: none;
-    color: #e85d04;
+    color: var(--rouge, #e2231a);
     font-weight: 600;
     font-size: 13px;
     padding: 8px 0;
@@ -1205,7 +1205,7 @@
     
     .sector-features li {
       background: #242424;
-      border-left-color: #f48c06;
+      border-left-color: #F45B54;
       color: #ddd;
     }
     
@@ -1214,7 +1214,7 @@
     }
     
     .sector-features li::before {
-      color: #f48c06;
+      color: #F45B54;
     }
     
     .sector-expandable.collapsed::after {
@@ -1223,11 +1223,11 @@
     
     .sector-content .section-label {
       background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-      border-bottom-color: #f48c06;
+      border-bottom-color: #F45B54;
     }
     
     .sector-cta {
-      background: linear-gradient(135deg, #f48c06, #e85d04);
+      background: linear-gradient(135deg, #F45B54, #e2231a);
     }
   }
 }
@@ -1377,7 +1377,7 @@
     border: none;
   }
 
-  /* Orange bottom border */
+  /* Red bottom border */
   .approche-card::after {
     content: '';
     position: absolute;
@@ -1385,7 +1385,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background: var(--orange);
+    background: var(--rouge);
   }
 
   .approche-card-inner {
@@ -1410,7 +1410,7 @@
     width: 40px;
     height: 40px;
     font-size: 32px;
-    color: var(--orange);
+    color: var(--rouge);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1454,7 +1454,7 @@
     border: none;
   }
 
-  /* Orange bottom border */
+  /* Red bottom border */
   .approche-card::after {
     content: '';
     position: absolute;
@@ -1462,7 +1462,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background: var(--orange);
+    background: var(--rouge);
   }
 
   .approche-card-inner {
@@ -1485,7 +1485,7 @@
     width: 40px;
     height: 40px;
     font-size: 28px;
-    color: var(--orange);
+    color: var(--rouge);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1682,7 +1682,7 @@
     }
 
     .approche-card:hover {
-      border-color: var(--orange);
+      border-color: var(--rouge);
     }
 
     .approche-card-title {
@@ -1694,7 +1694,7 @@
     }
 
     .approche-step {
-      color: rgba(232, 118, 26, 0.15);
+      color: rgba(226, 35, 26, 0.15);
     }
 
     .approche-icon-wrap {
@@ -2169,7 +2169,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background: var(--orange);
+    background: var(--rouge);
   }
 
   #capacites .approche-card:nth-child(1) {
@@ -2350,7 +2350,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background: var(--orange);
+    background: var(--rouge);
   }
 
   #process .home-process-steps .approche-card:nth-child(1) {
@@ -2424,5 +2424,39 @@
   #process .home-process-steps .approche-card-desc {
     font-size: 11px;
     line-height: 1.5;
+  }
+}
+
+/* ── Responsive Logo Optimization ── */
+@media (max-width: 900px) {
+  .logo {
+    height: 46px;
+    margin: 0;
+  }
+  .logo img {
+    height: 46px;
+    max-width: 155px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+    margin: 0;
+  }
+  .logo img {
+    height: 40px;
+    max-width: 135px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 34px;
+    margin: 0;
+  }
+  .logo img {
+    height: 34px;
+    max-width: 115px;
   }
 }
