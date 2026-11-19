@@ -85,6 +85,13 @@
 
 /* ── Root Variables ── */
 :root {
+  --rouge: #FF0000;
+  --rouge-dark: #db1919;
+  --rouge-light: #e73027;
+  --rouge-bg: rgba(226, 35, 26, .08);
+  --rouge-border: rgba(226, 35, 26, .25);
+  --orange: var(--rouge);
+  --or: var(--rouge);
   --nav-h: 72px;
   --container-padding: 24px;
 }
@@ -231,7 +238,8 @@
     -webkit-backdrop-filter: blur(16px);
     padding: 16px 24px 24px;
     gap: 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 2px solid var(--rouge);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
     z-index: 1000;
   }
   
@@ -242,16 +250,39 @@
   .nav-item {
     padding: 12px 16px;
     font-size: 13px;
+    border-radius: var(--r, 4px);
+    transition: all 0.25s ease;
+  }
+
+  .nav-item:hover,
+  .nav-item.active {
+    color: var(--rouge) !important;
+    background: var(--rouge-bg);
+  }
+
+  .nav-item.active::after {
+    display: none;
   }
   
   .nav-item--cta {
     text-align: center;
     margin: 8px 0 0;
+    background: var(--rouge) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px var(--rouge-border);
+  }
+
+  .nav-item--cta:hover {
+    background: var(--rouge-dark) !important;
   }
   
   .nav-burger {
     display: flex;
     z-index: 1001;
+  }
+
+  .nav-burger.open span {
+    background: var(--rouge);
   }
 
   .header-inner {
@@ -368,7 +399,7 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    border-bottom: 3px solid var(--rouge, #e2231a);
+    border-bottom: 3px solid var(--rouge);
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -384,7 +415,7 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    background: var(--rouge, #e2231a);
+    background: var(--rouge);
     border-radius: 50%;
     animation: pulse-dot 2s ease-in-out infinite;
   }
@@ -476,7 +507,7 @@
   .sector-image .image-overlay .sector-tag {
     font-size: 13px;
     font-weight: 600;
-    background: rgba(226, 35, 26, 0.9);
+    background: var(--rouge);
     padding: 4px 14px;
     border-radius: 20px;
     display: inline-block;
@@ -499,7 +530,7 @@
     left: 0;
     width: 40px;
     height: 3px;
-    background: linear-gradient(90deg, #e2231a, #F45B54);
+    background: linear-gradient(90deg, var(--rouge), var(--rouge-light));
     border-radius: 2px;
   }
   
@@ -533,7 +564,7 @@
     position: relative;
     background: #f8f8f8;
     border-radius: 8px;
-    border-left: 3px solid var(--rouge, #e2231a);
+    border-left: 3px solid var(--rouge);
     transition: all 0.3s ease;
   }
   
@@ -548,7 +579,7 @@
     left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--rouge, #e2231a);
+    color: var(--rouge);
     font-weight: 700;
     font-size: 16px;
   }
@@ -564,20 +595,20 @@
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #e2231a, #F45B54);
+    background: linear-gradient(135deg, var(--rouge), var(--rouge-light));
     color: #fff;
     font-weight: 600;
     font-size: 14px;
     border-radius: 30px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 16px rgba(226, 35, 26, 0.3);
+    box-shadow: 0 4px 16px var(--rouge-border);
     margin-top: 4px;
   }
   
   .sector-cta:active {
     transform: scale(0.96);
-    box-shadow: 0 2px 8px rgba(226, 35, 26, 0.2);
+    box-shadow: 0 2px 8px var(--rouge-border);
   }
   
   .sector-cta .arrow {
@@ -622,7 +653,7 @@
     gap: 8px;
     background: transparent;
     border: none;
-    color: var(--rouge, #e2231a);
+    color: var(--rouge);
     font-weight: 600;
     font-size: 13px;
     padding: 8px 0;
@@ -883,6 +914,7 @@
   .page-banner-content .section-label.light {
     font-size: 10px;
     letter-spacing: .16em;
+    color: var(--rouge-light);
   }
 
   .page-banner-content h1 {
@@ -900,6 +932,7 @@
   .page-banner-content .orange-rule {
     width: 40px;
     height: 3px;
+    background: var(--rouge);
   }
 }
 
@@ -1205,7 +1238,7 @@
     
     .sector-features li {
       background: #242424;
-      border-left-color: #F45B54;
+      border-left-color: var(--rouge-light);
       color: #ddd;
     }
     
@@ -1214,7 +1247,7 @@
     }
     
     .sector-features li::before {
-      color: #F45B54;
+      color: var(--rouge-light);
     }
     
     .sector-expandable.collapsed::after {
@@ -1223,11 +1256,11 @@
     
     .sector-content .section-label {
       background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-      border-bottom-color: #F45B54;
+      border-bottom-color: var(--rouge-light);
     }
     
     .sector-cta {
-      background: linear-gradient(135deg, #F45B54, #e2231a);
+      background: linear-gradient(135deg, var(--rouge-light), var(--rouge));
     }
   }
 }
@@ -1694,7 +1727,7 @@
     }
 
     .approche-step {
-      color: rgba(226, 35, 26, 0.15);
+      color: var(--rouge-border);
     }
 
     .approche-icon-wrap {
