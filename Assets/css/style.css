@@ -93,9 +93,9 @@ select {
 
 /* ── VARIABLES ── */
 :root {
-  --rouge: #FF0000;
-  --rouge-dark: #db1919;
-  --rouge-light: #e73027;
+  --rouge: #E2231A;
+  --rouge-dark: #B91710;
+  --rouge-light: #EA3D35;
   --rouge-bg: rgba(226, 35, 26, .08);
   --rouge-border: rgba(226, 35, 26, .25);
   --orange: var(--rouge);
@@ -133,6 +133,7 @@ select {
   max-width: 100%;
   padding: 0;
 }
+
 .section-label {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
@@ -978,17 +979,18 @@ select {
   margin-bottom: 1.3rem;
   transform: translateY(0);
   transition: none;
-  background-color:var(--rouge);
+  background-color: var(--rouge);
   width: fit-content;
   padding: 5px;
   color: #080808;
   border-radius: 5px;
   text-align: center;
 }
-.mc-tagline i{
+
+.mc-tagline i {
   margin-right: 5px;
   font-size: 14px;
-} 
+}
 
 .mc-title {
   font-family: 'Montserrat', sans-serif;
@@ -997,7 +999,8 @@ select {
   color: #fff;
   line-height: 1.2;
   margin-bottom: 12px;
-  min-height: 48px; /* Forces title to always take up 2 lines of space */
+  min-height: 48px;
+  /* Forces title to always take up 2 lines of space */
 }
 
 .mc-desc {
@@ -1726,57 +1729,57 @@ select {
 /* ═══════════════════════════════════════════════════════════════
    APPROCHE PROJET - STICKY SCROLL (chaque carte recouvre la précédente)
    ═══════════════════════════════════════════════════════════════ */
-   .approche-section {
-    background: #ffffff;
-    padding: 100px 0;
-  }
-  
-  .approche-section .section-header {
-    margin-bottom: 56px;
-  }
-  
-  .approche-section .section-title {
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 900;
-    color: #0d0d0d;
-    margin-bottom: 0;
-  }
-  
-  .approche-section .section-title .text-primary {
-    color: var(--rouge);
-  }
+.approche-section {
+  background: #ffffff;
+  padding: 100px 0;
+}
 
-  .approche-section .section-label {
-    background: var(--rouge);
-    color: #ffffff;
-    padding: 8px 16px;
-    display: inline-block;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  
-  .approche-section .orange-rule {
-    width: 64px;
-    height: 3px;
-    background: var(--rouge);
-    border-radius: 2px;
-    margin: 20px auto 0;
-  }
-  
-  .approche-subtitle {
-    max-width: 640px;
-    margin: 18px auto 0;
-    text-align: center;
-    color: #666;
-    font-size: 16px;
-    line-height: 1.7;
-  }
-  
-  
+.approche-section .section-header {
+  margin-bottom: 56px;
+}
+
+.approche-section .section-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 900;
+  color: #0d0d0d;
+  margin-bottom: 0;
+}
+
+.approche-section .section-title .text-primary {
+  color: var(--rouge);
+}
+
+.approche-section .section-label {
+  background: var(--rouge);
+  color: #ffffff;
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.approche-section .orange-rule {
+  width: 64px;
+  height: 3px;
+  background: var(--rouge);
+  border-radius: 2px;
+  margin: 20px auto 0;
+}
+
+.approche-subtitle {
+  max-width: 640px;
+  margin: 18px auto 0;
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
 /* ═══════════════════════════════════════════════════════════════
    ABOUT SECTION
    ═══════════════════════════════════════════════════════════════ */
@@ -1786,7 +1789,7 @@ select {
 .about-section {
   padding: 100px 0 80px;
   background: #ffffff;
- 
+
 }
 
 .about-section .section-header {
@@ -2034,7 +2037,7 @@ select {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
+
 }
 
 .stat-number {
@@ -2182,7 +2185,7 @@ select {
   padding: 100px 0;
   background: #f5f5f3;
   width: 100%;
- 
+
 }
 
 .about-why-layout {
@@ -2548,6 +2551,7 @@ select {
 }
 
 @media (max-width: 1024px) {
+
   .home-why-section,
   .home-process-section,
   .home-highlights-section,
@@ -2568,6 +2572,7 @@ select {
 }
 
 @media (max-width: 768px) {
+
   .home-why-section,
   .home-process-section,
   .home-highlights-section,
@@ -2597,6 +2602,7 @@ select {
 }
 
 @media (max-width: 480px) {
+
   .home-why-section,
   .home-process-section,
   .home-highlights-section,
@@ -2772,6 +2778,7 @@ select {
   border-color: var(--rouge);
   color: #fff;
 }
+
 /* ── Partners Section — Responsive ── */
 @media (max-width: 1024px) {
   .partners-row {
@@ -2849,6 +2856,7 @@ select {
     max-height: 42px;
   }
 }
+
 /* ═══════════════════════════════════════════════════════════════
    PROJECTS MOSAIC
    ═══════════════════════════════════════════════════════════════ */
@@ -3317,18 +3325,14 @@ select {
 
 .footer-brand img {
   width: auto;
-  height: 44px;
-  max-width: 140px;
+  height: 48px;
+  max-width: 170px;
   object-fit: contain;
+  display: block;
 }
 
 .footer-brand-name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.1;
-  text-transform: uppercase;
+  display: none;
 }
 
 .footer-about {
@@ -3806,6 +3810,7 @@ select {
 .cta-band .btn-outline {
   white-space: nowrap;
 }
+
 .cta-band {
   background: var(--rouge);
   padding: 56px 20px;
@@ -3925,7 +3930,7 @@ select {
   background: #fff;
 }
 
-.services-prestations-section > .wrapper {
+.services-prestations-section>.wrapper {
   margin-bottom: 56px;
 }
 
@@ -4036,4 +4041,3 @@ select {
 .services-prestations-section .about-split:hover .about-split__media img {
   transform: scale(1.04);
 }
-
